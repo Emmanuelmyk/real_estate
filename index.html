@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MilliProperties | Premium Real Estate</title>
+    <title>EdoProperty | Premium Real Estate</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -12,7 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/filter.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -23,8 +24,8 @@
       </a>
       <button class="menu-toggle"><i class="fas fa-bars"></i></button>
       <div class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/about.html" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#" class="nav-link nav-cta">Become an Agent</a>
       </div>
@@ -78,6 +79,57 @@
           <i class="fas fa-briefcase"></i>
           Home Appliances
         </button>
+
+        <!-- Add this to the sidebar section -->
+        <div class="filter-section">
+          <h3>Advanced Filters</h3>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <label>Price Range (₦)</label>
+            <div class="price-inputs">
+              <input
+                type="number"
+                id="minPrice"
+                placeholder="Min"
+                class="filter-input"
+              />
+              <span>-</span>
+              <input
+                type="number"
+                id="maxPrice"
+                placeholder="Max"
+                class="filter-input"
+              />
+            </div>
+            <div id="priceRange" class="range-slider"></div>
+          </div>
+
+          <!-- Location Filter -->
+          <div class="filter-group">
+            <label>Location</label>
+            <select id="locationFilter" class="filter-select">
+              <option value="">All Locations</option>
+              <option>Banana Island</option>
+              <option>Ikoyi</option>
+              <option>Lekki</option>
+              <option>Victoria Island</option>
+              <option>GRA Benin</option>
+            </select>
+          </div>
+
+          <!-- Property Type Filter -->
+          <div class="filter-group">
+            <label>Property Type</label>
+            <select id="typeFilter" class="filter-select">
+              <option value="">All Types</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Land</option>
+              <option>Shortlet</option>
+            </select>
+          </div>
+        </div>
       </nav>
 
       <!-- Property Grid -->
@@ -330,46 +382,32 @@
           <div class="modal-main">
             <div
               class="gallery-main"
-              style="
-                background-image: url('assets/images/house.jpeg');
-              "
+              style="background-image: url('assets/images/house.jpeg')"
             ></div>
             <div class="gallery-thumbnails">
               <div
                 class="thumbnail active"
-                style="
-                  background-image: url('assets/images/house.jpeg');
-                "
+                style="background-image: url('assets/images/house.jpeg')"
               ></div>
               <div
                 class="thumbnail"
-                style="
-                  background-image: url('assets/images/agent.jpeg');
-                "
+                style="background-image: url('assets/images/agent.jpeg')"
               ></div>
               <div
                 class="thumbnail"
-                style="
-                  background-image: url('assets/images/agent.jpeg');
-                "
+                style="background-image: url('assets/images/agent.jpeg')"
               ></div>
               <div
                 class="thumbnail"
-                style="
-                  background-image: url('assets/images/agent.jpeg');
-                "
+                style="background-image: url('assets/images/agent.jpeg')"
               ></div>
               <div
                 class="thumbnail"
-                style="
-                  background-image: url('assets/images/house.jpeg');
-                "
+                style="background-image: url('assets/images/house.jpeg')"
               ></div>
               <div
                 class="thumbnail"
-                style="
-                  background-image: url('assets/images/agent.jpeg');
-                "
+                style="background-image: url('assets/images/agent.jpeg')"
               ></div>
             </div>
 
@@ -511,6 +549,7 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-   <script src="/js/index.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/filter.js"></script>
   </body>
 </html>
